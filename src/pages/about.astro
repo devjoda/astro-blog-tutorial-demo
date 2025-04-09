@@ -18,6 +18,9 @@ const goal = 3;
 const skillColor = 'navy';
 const skillFontWeight = 'bold';
 const skillTextCase = 'lowercase';
+
+const pageTitle = "About Me";
+const pageDescription = "Read about my interest and skills";
 ---
 
 <style define:vars={{skillColor, skillFontWeight, skillTextCase}}>
@@ -32,7 +35,7 @@ const skillTextCase = 'lowercase';
 	}
 </style>
 
-<BaseLayout pageTitle="About Me">
+<BaseLayout pageTitle={pageTitle} pageDescription={pageDescription}>
 	<h2>...and my Astro site!</h2>
 	<p>Here are a few facts about me:</p>
 	<ul>

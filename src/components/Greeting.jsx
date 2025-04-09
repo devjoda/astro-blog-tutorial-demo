@@ -7,8 +7,8 @@ export default function Greeting({ messages }) {
 
   return (
     <div>
-      <h3>{greeting}! Thank you for visiting!</h3>
-      <button id="new-greeting" aria-label="New Greeting" onClick={() => setGreeting(randomMessage)}>
+      <h3 aria-live="polite">{greeting}! Thank you for visiting!</h3>
+      <button id="new-greeting" aria-label="Generate a new random greeting" type="button" onClick={() => setGreeting(randomMessage)}>
         New Greeting
       </button>
     </div>

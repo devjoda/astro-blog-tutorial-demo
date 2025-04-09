@@ -3,11 +3,12 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import BlogPost from '../components/BlogPost.astro';
 const allPosts = Object.values(import.meta.glob('./posts/*.md', { eager: true }));
 const pageTitle = "My Astro Learning Blog";
+const description = "This is where I will post about my journey learning Astro.";
 ---
 
-<BaseLayout pageTitle={pageTitle}>
+<BaseLayout pageTitle={pageTitle} pageDescription={description}>
 	<h2>My Astro Learning Blog</h2>
-	<p>This is where I will post about my journey learning Astro.</p>
+	<p>{description}</p>
 	<h3>Posts</h3>
 	<ul>
 		{allPosts.map((post: any) => <BlogPost url={post.url} title={post.frontmatter.title} />)}
